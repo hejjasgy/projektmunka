@@ -1,0 +1,14 @@
+INSERT INTO `termek` (`id`, `termek_neve`, `kategoria`, `termek_ara`, `termek_kepe_nagy`, `termek_kepe_kicsi`, `mennyiseg`) VALUES
+(40, 'Acapulco Blue', 'cigaretta', 1620, 'foto_n_01.jpg', 'foto_k_01.jpg', 1),
+(41, 'Austin Blue 100\'s', 'cigaretta', 1440, 'foto_n_02.jpg', 'foto_k_02.jpg', 1),
+(42, 'Austin Red 100\'s', 'cigaretta', 1500, 'foto_n_03.jpg', 'foto_k_02.jpg', 1),
+(43, 'Benson & Hedges Black', 'cigaretta', 1940, 'foto_n_04.jpg', 'foto_k_03.jpg', 1),
+(44, 'Benson & Hedges Silver', 'cigaretta', 1680, 'foto_n_05.jpg', 'foto_k_03.jpg', 1),
+(45, 'Camel Yellow', 'cigaretta', 1990, 'foto_n_06.jpg', 'foto_k_04.jpg', 1),
+(46, 'Dunhill Fine Cut Black', 'cigaretta', 1750, 'foto_n_07.jpg', 'foto_k_05.jpg', 1),
+(47, 'Glamour Pink', 'cigaretta', 999, 'foto_n_08.jpg', 'foto_k_06.jpg', 1),
+(48, 'Golden Gate Red', 'cigaretta', 1590, 'foto_n_09.jpg', 'foto_k_07.jpg', 1),
+(49, 'Hungária Piros', 'cigaretta', 1570, 'foto_n_10.jpg', 'foto_k_08.jpg', 1),
+(50, 'Marlboro Advance Blue', 'cigaretta', 1740, 'foto_n_11.jpg', 'foto_k_9.jpg', 1),
+(51, 'Matrix Redline', 'cigaretta', 1390, 'foto_n_12.jpg', 'foto_k_10.jpg', 1),
+(52, 'Multifilter Classic Blue', 'cigaretta', 1750, 'foto_n_13.jpg', 'foto_k_11.jpg', 1);
