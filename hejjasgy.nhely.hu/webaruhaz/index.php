@@ -7,10 +7,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-<div class="p-5 bg-primary text-white text-center">
-    <h1>Héjjas Gyula</h1>
-    <p>Kollár Sándor, Braczkó Tamás, Mecsei Péter</p>
-</div>
+
+<?php include 'header.php';?>
+
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <div class="container-fluid">
         <ul class="navbar-nav">
@@ -21,7 +20,7 @@
                 <a class="nav-link" href="energiaitalok.php">Energiaitalok</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="ecigorettakitek.php">E-cigoretták</a>
+                <a class="nav-link" href="ecigorettakitek.php">E-cigaretták</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="alkoholok.php">Alkoholok</a>
@@ -36,30 +35,21 @@
 <div class="container-fluid">
     <table class="table table-striped">
         <br>
+        <?php include 'kapcsolatok.php'?>
+
         <?php
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "webaruhaz";
-        //$dbname = "a saját adatbázis neve";
-
-
-        // Create connection
-        $conn = mysqli_connect($servername, $username, $password, $dbname);
-        // Check connection
-        if (!$conn) {
-            die("Kapcsolódási hiba: " . mysqli_connect_error());
-        }
 
         $sql = "SELECT * FROM termek";
         $result = mysqli_query($conn, $sql);
+
+        $sorszam = 1;
 
         if (mysqli_num_rows($result) > 0) {
             // output data of each row
             echo "<tr>";
 
             echo
-                "<th>ID</th>" .
+                "<th>#</th>" .
                 "<th>Termék neve</th> ".
                 "<th>Kategória</th> " .
                 "<th>Termék ára </th>" .
@@ -74,10 +64,12 @@
 
                 echo "<tr>" ;
 
-                echo "<td>" .$row["id"]. "</td>" .
+                echo "<td>" .$sorszam. "</td>" .
                     "<td>" .$row["termek_neve"]."</td>" .
                     "<td>" .$row["kategoria"]."</td>" .
                     "<td>" .$row["termek_ara"]."</td>" ;
+
+                $sorszam++;
 
                 print("<td><img src=\"fotok/$row[termek_kepe_nagy]\" alt=\"\" style=\"height:200px;width:300px;\" class=\"img-fluid\" style=\"max-width=\"300\"\"></td>");
 
@@ -100,10 +92,8 @@
     </table>
 </div>
 
+<?php include 'footer.php';?>
 
-<div class="mt-5 p-4 bg-dark text-white text-center">
-    <p>Készítette: Héjjas Gyula 2022</p>
-</div>
 </body>
 
 <html>
