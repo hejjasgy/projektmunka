@@ -5,8 +5,9 @@
     <title>Héjjas Gyula webáruháza</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" href="fotok/logosz.png">
 </head>
-<body>
+<body style="color:#131313; background-color: #DADADA;">
 
 <?php include 'header.php';?>
 
@@ -14,7 +15,10 @@
     <div class="container-fluid">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link active" href="index.php">Minden termék</a>
+                <a class="nav-link active" href="index.php">Üdvözlő</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="kinalat.php">Minden termék</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="energiaitalok.php">Energiaitalok</a>
@@ -33,63 +37,13 @@
 </nav>
 
 <div class="container-fluid">
-    <table class="table table-striped">
-        <br>
-        <?php include 'kapcsolatok.php'?>
-
-        <?php
-
-        $sql = "SELECT * FROM termek";
-        $result = mysqli_query($conn, $sql);
-
-        $sorszam = 1;
-
-        if (mysqli_num_rows($result) > 0) {
-            // output data of each row
-            echo "<tr>";
-
-            echo
-                "<th>#</th>" .
-                "<th>Termék neve</th> ".
-                "<th>Kategória</th> " .
-                "<th>Termék ára </th>" .
-                //"<th>Termék képe nagy</th> " .
-                "<th>Foto</th>".
-                "<th>Mennyiség </th>";
-
-            echo "</tr>";
-
-
-            while($row = mysqli_fetch_assoc($result)) {
-
-                echo "<tr>" ;
-
-                echo "<td>" .$sorszam. "</td>" .
-                    "<td>" .$row["termek_neve"]."</td>" .
-                    "<td>" .$row["kategoria"]."</td>" .
-                    "<td>" .$row["termek_ara"]."</td>" ;
-
-                $sorszam++;
-
-                print("<td><img src=\"fotok/$row[termek_kepe_nagy]\" alt=\"\" style=\"height:200px;width:300px;\" class=\"img-fluid\" style=\"max-width=\"300\"\"></td>");
-
-
-                //"<td>" .$row["termek_kepe_nagy"]."</td>" .
-
-                //"<td>" .$row["termek_kepe_kicsi"]."</td>" .
-
-                echo "<td>" .$row["mennyiseg"]."</td>" ;
-                echo "</tr>" ;
-
-            }
-        } else {
-            echo "0 találat";
-        }
-
-        mysqli_close($conn);
-        ?>
-
-    </table>
+<div style="display: flex; height: 60vh; align-items: center; justify-content: center; text-align: center;">
+    <div style="margin-top: 50px;">
+        <h1>Üdv itt a Weeb áruházban!</h1>
+        <img src="fotok/logosz.png" style="height: 500px;"> <br>
+        <h5>Válogass kedvedre!</h5>
+    </div>
+</div>
 </div>
 
 <?php include 'footer.php';?>
