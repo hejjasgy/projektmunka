@@ -46,7 +46,43 @@
 </div>
 </div>
 
+
+<div id="cookie-alert" class="d-flex justify-content-center mt-5" style="position: fixed; bottom: 10px; text-align: center; margin: auto; width:100%;">
+    <div class="card p-3 cookie">
+        <span>A weebáruházunk cookiekat használ.<br></span>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Tudj meg többet itt!<i class="fa fa-angle-right ml-2"></i></a>
+        <div class="mt-4">
+            <button class="btn btn-light btn-sm" type="button" onclick="enableCookies();">Elfogadom</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    checkCookie()
+    function checkCookie() {
+        var cookieAlert = document.getElementById("cookie-alert");
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let cookie = decodedCookie.split(";")[0].startsWith("cookie");
+        if (cookie == true) {
+            cookieAlert.style.display = "none"
+            cookieAlert.style.height = "0px";
+            cookieAlert.style.opacity = "0";
+            console.log(cookie)
+        }else{
+            cookieAlert.style.display = "block";
+            console.log(cookie)
+        }
+    }
+
+    function enableCookies(){
+        document.cookie = 'cookie=elfogadva;path=/';
+        checkCookie()
+    }
+
+</script>
+
 <?php include 'footer.php';?>
+
 
 </body>
 
