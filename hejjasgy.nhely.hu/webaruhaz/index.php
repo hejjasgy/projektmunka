@@ -47,8 +47,8 @@
 </div>
 
 
-<div id="cookie-alert" class="d-flex justify-content-center mt-5" style="position: fixed; bottom: 10px; text-align: center; margin: auto; width:100%;">
-    <div class="card p-3 cookie">
+<div id="cookie-alert" style="position: fixed;color:white; text-align: center; height: 100vh; top:0; margin: auto; width:100%; background-color: rgba(0,0,0,0.9)">
+    <div style="margin-top: 20px;">
         <span>A weebáruházunk cookiekat használ.<br></span>
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Tudj meg többet itt!<i class="fa fa-angle-right ml-2"></i></a>
         <div class="mt-4">
