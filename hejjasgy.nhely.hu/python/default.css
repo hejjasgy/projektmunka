@@ -1,0 +1,11 @@
+body{margin: 0px; padding: 0px;background-color: #DADADA;}
+header{position: fixed; background-color: rgba(0,0,0,0.4);width: 100%;top:0px;left:0px;}
+header nav a{color: #fff;}
+#page-content{margin-top: 60px;}
+#content table tr td{cursor: default; width: 50%; transition: background-color 0.6s; background-color: #DADADA;}
+#content table tr td:hover{background-color:#e5c7ca;cursor: pointer;}
+#content img{height: 500px; object-fit: fill;}
+#example_one, #example_one a{color: #1a1e21;}
+#professor-python, #professor-python a{color: goldenrod;}
+#paris, #paris a{color: #20c997;}
+#mix, #mix a{color: #ff0046;}
